@@ -323,7 +323,7 @@ namespace Protection {
         void Start() {
             std::thread(Scanner::PEBScanner).detach();
 
-            EncryptedPlayer player("Player1", 100);
+            auto* player = new EncryptedPlayer("Player2", 100);
 
             bool initialRender = true;
 
@@ -331,22 +331,22 @@ namespace Protection {
                 bool change=true;
 
                 if (initialRender) {
-                    Util::render(player.GetName(), player.GetHealth());
+                    Util::render(player->GetName(), player->GetHealth());
                     initialRender = false;
                 }
 
                 if (GetAsyncKeyState(VK_SPACE) & 1) {
-                    player.AppyHeal();
+                    player->AppyHeal();
                 }
                 else if (GetAsyncKeyState(VK_SHIFT) & 1) {
-                    player.ApplyDamage();
+                    player->ApplyDamage();
                 }
                 else {
                     change=false;
                 }
 
                 if (change==true) {
-                    Util::render(player.GetName(), player.GetHealth());
+                    Util::render(player->GetName(), player->GetHealth());
                 }
                 Sleep(1);
             }
@@ -412,7 +412,7 @@ namespace Protection {
             Communication::RegisterCallback();
             std::thread(Scanner::FullScanner).detach();
 
-            EncryptedPlayer player("Player1", 100);
+            auto player = new EncryptedPlayer("Player3", 100);
 
             bool initialRender = true;
 
@@ -420,22 +420,22 @@ namespace Protection {
                 bool change=true;
 
                 if (initialRender) {
-                    Util::render(player.GetName(), player.GetHealth());
+                    Util::render(player->GetName(), player->GetHealth());
                     initialRender = false;
                 }
 
                 if (GetAsyncKeyState(VK_SPACE) & 1) {
-                    player.AppyHeal();
+                    player->AppyHeal();
                 }
                 else if (GetAsyncKeyState(VK_SHIFT) & 1) {
-                    player.ApplyDamage();
+                    player->ApplyDamage();
                 }
                 else {
                     change=false;
                 }
 
                 if (change==true) {
-                    Util::render(player.GetName(), player.GetHealth());
+                    Util::render(player->GetName(), player->GetHealth());
                 }
                 Sleep(1);
             }

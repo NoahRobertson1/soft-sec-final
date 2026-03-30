@@ -22,7 +22,7 @@ namespace Player {
     }
 
     void Start() {
-        Player player("Player1", 100);
+        Player* player = new Player("Player1", 100);
 
         bool initialRender = true;
 
@@ -30,22 +30,22 @@ namespace Player {
             bool change=true;
 
             if (initialRender) {
-                Util::render(player.GetName(), player.GetHealth());
+                Util::render(player->GetName(), player->GetHealth());
                 initialRender = false;
             }
 
             if (GetAsyncKeyState(VK_SPACE) & 1) {
-                player.AppyHeal();
+                player->AppyHeal();
             }
             else if (GetAsyncKeyState(VK_SHIFT) & 1) {
-                player.ApplyDamage();
+                player->ApplyDamage();
             }
             else {
                 change=false;
             }
 
             if (change==true) {
-                Util::render(player.GetName(), player.GetHealth());
+                Util::render(player->GetName(), player->GetHealth());
             }
             Sleep(1);
         }
