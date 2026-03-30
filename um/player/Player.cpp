@@ -22,7 +22,7 @@ namespace Player {
     }
 
     void Start() {
-        Player* player = new Player("Player1", 100);
+        auto* player = new Player("Player1", 100);
 
         bool initialRender = true;
 

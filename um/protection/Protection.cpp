@@ -323,7 +323,7 @@ namespace Protection {
         void Start() {
             std::thread(Scanner::PEBScanner).detach();
 
-            auto* player = new EncryptedPlayer("Player2", 100);
+            auto player = new EncryptedPlayer("Player2", 100);
 
             bool initialRender = true;
 
