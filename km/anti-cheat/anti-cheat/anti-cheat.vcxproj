@@ -122,11 +122,13 @@
   <ItemGroup>
     <ClCompile Include="callback.cpp" />
     <ClCompile Include="communication.cpp" />
+    <ClCompile Include="heartbeat.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="callback.h" />
     <ClInclude Include="communication.h" />
+    <ClInclude Include="heartbeat.h" />
     <ClInclude Include="includes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
