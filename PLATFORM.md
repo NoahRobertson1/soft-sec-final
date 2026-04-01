@@ -26,7 +26,7 @@
 Run `scripts/test_signing.bat` as Administrator and reboot.
 Confirm test mode is active — a "Test Mode" watermark should appear in the bottom right corner of the desktop.
 
- **Important:** `The following .bat files look for `anti-cheat.sys` in the same directory as the script. If the `.sys` file is missing or in a different location the scripts will fail.
+ **Important:** The following .bat files look for `anti-cheat.sys` in the same directory as the script. If the `.sys` file is missing or in a different location the scripts will fail.
 
 ### Trust the Test Certificate
 Run `scripts/sign.bat` as Administrator.
