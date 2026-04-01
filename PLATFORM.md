@@ -42,7 +42,7 @@ Run `scripts/unload_driver.bat` as Administrator when finished.
 
 ## Tested Environment
 - Windows 11 Pro x64
-- VMware Workstation 17 (guest VM)
+- VirtualBox
 - Test signing enabled, HVCI disabled, Secure Boot disabled
 
 ## Known Incompatibilities
