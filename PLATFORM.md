@@ -43,7 +43,7 @@ Run `scripts/unload_driver.bat` as Administrator when finished.
 ## Tested Environment
 - Windows 11 Pro x64
 - VirtualBox
-- Test signing enabled, HVCI disabled, Secure Boot disabled
+- Test signing enabled
 
 ## Known Incompatibilities
 - HVCI / Memory Integrity must be off — kernel driver will fail to load with error 577
