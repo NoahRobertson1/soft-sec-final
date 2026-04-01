@@ -56,3 +56,6 @@ target_link_options(soft_sec_final PRIVATE
 set_target_properties(soft_sec_final PROPERTIES
         WIN32_EXECUTABLE FALSE
 )
+
+
+target_link_options(soft_sec_final PRIVATE -s) # remove debug symbols

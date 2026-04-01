@@ -100,6 +100,7 @@ namespace Protection {
                         if (regionAddr < base || regionAddr > end) {
                             std::wstring message = L"Manual mapped module detected - suspicious executable region at: 0x" + std::to_wstring(regionAddr);
                             MessageBoxW(nullptr, message.c_str(), L"Anti Cheat", MB_OK | MB_ICONWARNING);
+                            std::exit(1);
                         }
                     }
                 }
@@ -145,6 +146,7 @@ namespace Protection {
                 if (!found) {
                     std::wstring message = L"Manually mapped module detected: " + vadPath;
                     MessageBoxW(nullptr, message.c_str(), L"Anti Cheat", MB_OK | MB_ICONWARNING);
+                    std::exit(1);
                 }
             }
 
@@ -196,6 +198,7 @@ namespace Protection {
                             std::to_wstring(reinterpret_cast<uintptr_t>(startAddr));
 
                         MessageBoxW(nullptr, message.c_str(), L"Anti Cheat", MB_OK | MB_ICONWARNING);
+                        std::exit(1);
                     }
                 }
 
@@ -274,6 +277,7 @@ namespace Protection {
                 if (!IsModuleWhitelisted(fullPath)) {
                     std::wstring message = L"Unknown module: " + fullPath;
                     MessageBoxW(nullptr, message.c_str(), L"Anti Cheat", MB_OK | MB_ICONWARNING);
+                    std::exit(1);
                 }
 
                 entry = entry->Flink;
